@@ -16,7 +16,7 @@ public class Main extends ApplicationAdapter {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		img = new Texture("Gomba1.png");
+		img = new Texture("MStanding.png");
 		spr2= new Sprite (img);
 		spr2.setPosition(Gdx.graphics.getWidth()/2-spr2.getWidth()/2, Gdx.graphics.getHeight()/2-spr2.getHeight()/2);
 		spr2.setRotation(0f);
