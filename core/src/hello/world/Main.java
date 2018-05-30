@@ -13,21 +13,21 @@ public class Main extends ApplicationAdapter {
 	Texture img1;
 	Texture img2;
     Sprite sprMstanding;
-    Sprite sprsprGoomba;
+    Sprite sprGoomba;
     int i;
 
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 		img1 = new Texture("MStanding.png");
-        img2 = new Texture("sprGoomba_edited-1.png");
-       sprMstanding= new Sprite (img1);
+        img2 = new Texture("Goomba_edited-1.png");
+        sprMstanding= new Sprite (img1);
 		sprGoomba= new Sprite (img2);
 
         sprMstanding.setPosition(Gdx.graphics.getWidth()/2-sprMstanding.getWidth()/2, Gdx.graphics.getHeight()/2-sprMstanding.getHeight()/2);
         sprMstanding.setScale(1f);
-        sprsprGoomba.setPosition(Gdx.graphics.getWidth()/2-sprMstanding.getWidth()/2,-100);
-        sprsprGoomba.setScale(0.5f);
+        sprGoomba.setPosition(Gdx.graphics.getWidth()/2-sprMstanding.getWidth()/2,-100);
+        sprGoomba.setScale(0.5f);
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class Main extends ApplicationAdapter {
            sprMstanding.translateX(1f);
 
         //sprGoomba sliding across
-            sprsprGoomba.translateX(-1f);
+            sprGoomba.translateX(-1f);
 
 
 	   //background
@@ -47,8 +47,8 @@ public class Main extends ApplicationAdapter {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
 		//draw Mario
-		batch.draw(Mstanding,sprMstanding.getX(),sprMstanding.getY(),sprMstanding.getWidth()/2,Mstanding.getHeight()/2,
-               sprMstanding.getWidth(),sprMstanding.getHeight(),Mstanding.getScaleX(),sprMstanding.getScaleY(),sprMstanding.getRotation());
+		batch.draw(sprMstanding, sprMstanding.getX(),  sprMstanding.getY(),sprMstanding.getWidth()/2,sprMstanding.getHeight()/2,
+               sprMstanding.getWidth(),sprMstanding.getHeight(),sprMstanding.getScaleX(),sprMstanding.getScaleY(),sprMstanding.getRotation());
 		//draw sprGoomba
         batch.draw(sprGoomba, sprGoomba.getX(), sprGoomba.getY(), sprGoomba.getWidth()/2,sprGoomba.getHeight()/2,
                 sprGoomba.getWidth(), sprGoomba.getHeight(),sprGoomba.getScaleX(), sprGoomba.getScaleY(), sprGoomba.getRotation());
