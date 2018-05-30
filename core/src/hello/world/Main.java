@@ -26,7 +26,7 @@ public class Main extends ApplicationAdapter {
 
         sprMstanding.setPosition(Gdx.graphics.getWidth()/2-sprMstanding.getWidth()/2, Gdx.graphics.getHeight()/2-sprMstanding.getHeight()/2);
         sprMstanding.setScale(1f);
-        sprGoomba.setPosition(Gdx.graphics.getWidth()/2-sprMstanding.getWidth()/2,-100);
+        sprGoomba.setPosition(0,-100);
         sprGoomba.setScale(0.5f);
 	}
 
